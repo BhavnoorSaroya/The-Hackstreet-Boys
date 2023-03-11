@@ -2,90 +2,27 @@
 <html lang="en">
 
 <head>
-  <title>WeatherEye</title>
-  <meta name="comp1800 template" content="My 1800 App" />
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Bootstrap Library CSS CDN go here -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-
-  <!-------------------------------------------------------->
-  <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
-  <!-------------------------------------------------------->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
-
-  <!-- Other libraries go here -->
-  <!-- Link to styles of your own -->
-  <link rel="stylesheet" href="styles/aboutus.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./scripts/skeleton.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/07ca69b752.js" crossorigin="anonymous"></script>
+    <title>Document</title>
 </head>
 
 <body>
-  <!-- Add an onclick attribute to define click event handler -->
-  <!-- <button onclick="window.location.href='login.html'" class="btn btn-primary btn-lg" type="button">Login/Signup</button> -->
-  <!------------------------------>
-  <!-- Your HTML Layout go here -->
-  <!------------------------------>
-  <nav id="navbarPlaceholder" class="navbar navbar-expand-lg bg-dark">
-    <div class="container-fluid text-white">
-        <a class="navbar-brand text-white" href="main.html"><b>WeatherEye</b></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon text-white"><i class="fa-solid fa-bars"></i></span>
-        </button>
-        <div class="collapse navbar-collapse text-white" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="main.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="favourite.html">Favourites</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Menu
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="../aboutus.html">About Us</a></li>
-                        <li><a class="dropdown-item" href="#">Help</a></li>
-                        <li>
-                            <hr class="dropdown-divider" />
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <form class="d-flex" role="search">
-                <input id="city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <button type="submit" class="btn btn-outline-primary text-white" id="newCity">Search</button>
-            </form>
-        </div>
-    </div>
-</nav>
-
-  <!-- body -->
-  <!-- <div class="about-section">
-      <h1>About Us Page</h1>
-      <p>Some text about who we are and what we do.</p>
-      <p>Resize the browser window to see that this page is responsive by the way.</p>
-    </div> -->
+  <nav id="navbarPlaceholder"></nav>
 
   <h2 style="text-align:center">ThE HaCkStReEt BoYs</h2>
   <div class="card-group">
     <div class="card">
-      <img class="card-img-top" src="../image/jas.jpg" alt="Card image cap">
+      <img class="card-img-top" src="../image/bhav.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Bhavnoor</h5>
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -111,11 +48,11 @@
         <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
       </div>
       <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
+        <button type="button" class="btn btn-primary">LinkedIn</button>
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="../image/jas.jpg" alt="Card image cap">
+      <img class="card-img-top" src="../image/yousuf.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Yousuf</h5>
         <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
@@ -129,38 +66,20 @@
       <div class="card-body">
         <h5 class="card-title">Abhishek</h5>
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        <button type="button" class="btn btn-primary">LinkedIn</button>
       </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
+      <!-- <div class="card-footer">
+        <button type="button" class="btn btn-primary">LinkedIn</button>
+      </div> -->
     </div>
   </div>
 
 
   <!-- Footer -->
-  <footer class="d-flex flex-wrap justify-content-between text-white bg-dark align-items-center py-3 my-4 border-top">
-    <div class="col-md-4 d-flex align-items-center ">
-        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-            <svg class="bi" width="30" height="24">
-                <use xlink:href="#bootstrap"></use>
-            </svg>
-        </a>
-        <span class="mb-3 mb-md-0 text-white">Hackstreet boys © 2023 Hack The Break</span>
-    </div>
-
-    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3"><a class="text-white" href="#"><i class="fa-brands fa-instagram"></i></a></li>
-        <li class="ms-3"><a class="text-white" href="#"><i class="fa-brands fa-facebook"></i></li>
-        <li class="ms-3"><a class="text-white" href="#"><i class="fa-brands fa-twitter"></i></li>
-    </ul>
-</footer>
+  <footer id="footerDiv"> </footer>
 
   <!-- Link to scripts of your own -->
-  <script src="./scripts/firebaseAPI_BBY05.js"></script>
   <script src="scripts/skeleton.js"></script>
-  <script src="./scripts/script.js"></script>
-  <!-- <script src="./scripts/user.js"></script> -->
-  <!-- <script src="./scripts/main.js"></script> -->
 </body>
 
 </html>
