@@ -52,6 +52,15 @@ const input = document.getElementById('pdf-file-input');
 
 // Listen for the file to be selected
 input.addEventListener('change', function() {
+  
+  
+    console.log(input.files[0]);
+    var embed = document.getElementById('output');
+    embed.src = URL.createObjectURL(event.target.files[0]);
+
+
+  
+  
   // Get the selected file
   const file = input.files[0];
 
