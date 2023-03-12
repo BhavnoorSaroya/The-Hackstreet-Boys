@@ -4,12 +4,14 @@
 //     teacher: ['Teaching', 'Education', 'Classroom', 'Lesson', 'Curriculum', 'Student', 'Assessment', 'Grading', 'Pedagogy'],
 //     softskill_keywords : ['Achieved', 'Adapted', 'Analyzed', 'Collaborated', 'Created', 'Demonstrated', 'Developed', 'Executed', 'Improved', 'Initiated', 'Managed', 'Negotiated', 'Organized', 'Presented', 'Resolved', 'Strategized', 'Supervised', 'Trained', 'Utilized', 'Volunteered']
 //   };
-$('#pdf-file-input').slideUp(2);
+$("#pdf-file-input").slideUp(2);
 // Get the input element
 const input = document.getElementById("pdf-file-input");
 
 // Listen for the file to be selected
 input.addEventListener("change", function () {
+  var emb = document.getElementById("output");
+  emb.src = URL.createObjectURL(input.files[0]);
   // Get the selected file
   const file = input.files[0];
 
@@ -64,7 +66,9 @@ function rateResume(resumeText, jobType) {
       if (words.includes(keyword.toLowerCase())) {
         return count + 1;
       }
+
       return count;
+      
     },
     0
   );
@@ -78,7 +82,35 @@ function rateResume(resumeText, jobType) {
   if (softskill_rating > 100) {
     softskill_rating = 100;
   }
+  // technical skills bar
+  const score1 = rating; // replace with your soft score
+  const bar1 = document.querySelector('.bar1');
+  const barHeight1 = Math.min(100, Math.max(0, score1)) + '%';
+  bar1.style.height = barHeight1;
 
+  if (score1 > 70) {
+  bar1.classList.add('green');
+  } else if (score1 >= 40) {
+  bar1.classList.add('yellow');
+  } else {
+  bar1.classList.add('red');
+  }
+  $('.bar-container1').show();
+
+  // soft skill bar
+  const score2 = softskill_rating; // replace with your soft score
+  const bar2 = document.querySelector('.bar2');
+  const barHeight2 = Math.min(100, Math.max(0, score2)) + '%';
+  bar2.style.height = barHeight2;
+
+  if (score2 > 70) {
+  bar2.classList.add('green');
+  } else if (score2 >= 40) {
+  bar2.classList.add('yellow');
+  } else {
+  bar2.classList.add('red');
+  }
+  $('.bar-container2').show();
   // Return the rating
   return [rating, softskill_rating];
 }
@@ -86,8 +118,8 @@ function rateResume(resumeText, jobType) {
 const selectElement = document.getElementById("mySelect");
 
 selectElement.addEventListener("change", function () {
-
-    $('#pdf-file-input').slideDown(600);
+  $("#pdf-file-input").slideDown(400);
+//   $("#mySelect").slideUp(0);
 
   const selectedOption = selectElement.value;
   console.log(selectedOption);
@@ -97,24 +129,25 @@ selectElement.addEventListener("change", function () {
 // Example usage
 var resumeText = "";
 var jobType = "";
+
+
+
+
+////////////////////////////////////////NOORS CODE BELOW IDK WHAT IT DOES////////////////////////////////////////
+
+
 // if (resumeText != "text" && job)
 // const rating = rateResume(resumeText, jobType);
 //   console.log(`Rating: ${rating}%`);
 //   console.log(rateResume(resumeText, jobType))
 
-
-
 // // Listen for the file to be selected
 // input.addEventListener('change', function() {
-  
-  
+
 //     console.log(input.files[0]);
 //     var embed = document.getElementById('output');
 //     embed.src = URL.createObjectURL(event.target.files[0]);
 
-
-  
-  
 //   // Get the selected file
 //   const file = input.files[0];
 
@@ -145,5 +178,4 @@ var jobType = "";
 //   };
 // });
 
-  
-  
+
