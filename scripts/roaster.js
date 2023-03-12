@@ -53,6 +53,10 @@ function rateResume(resumeText, jobType) {
   // Convert the resume text to lowercase and split into individual words
   const words = resumeText.toLowerCase().split(/\W+/);
 
+//   if (words < 100) {
+//     $("#techDesc").append("Your resume has too few words!");
+//   }
+
   // Count the number of keywords found in the resume for the given job type
   const numKeywords = jobKeywords[jobType].reduce((count, keyword) => {
     if (words.includes(keyword.toLowerCase())) {
@@ -68,7 +72,6 @@ function rateResume(resumeText, jobType) {
       }
 
       return count;
-      
     },
     0
   );
@@ -84,33 +87,39 @@ function rateResume(resumeText, jobType) {
   }
   // technical skills bar
   const score1 = rating; // replace with your soft score
-  const bar1 = document.querySelector('.bar1');
-  const barHeight1 = Math.min(100, Math.max(0, score1)) + '%';
+  const bar1 = document.querySelector(".bar1");
+  const barHeight1 = Math.min(100, Math.max(0, score1)) + "%";
   bar1.style.height = barHeight1;
 
   if (score1 > 70) {
-  bar1.classList.add('green');
+    bar1.classList.add("green");
+    $("#techDesc").text("Congratulations! Your resume is a great fit for the job posted in this field. You have an impressive range of technical skills that make you stand out from other candidates. Your attention to detail and ability to showcase your achievements make you a great contender for this job");
   } else if (score1 >= 40) {
-  bar1.classList.add('yellow');
+    bar1.classList.add("yellow");
+    $("#techDesc").text("Consider developing your technical skills further to make your resume more competitive. Research the specific technical skills required for the job and identify areas where you can improve. Taking additional courses or certifications can also help enhance your expertise");
   } else {
-  bar1.classList.add('red');
+    bar1.classList.add("red");
+    $("#techDesc").text("Consider highlighting your technical skills and expertise in the specific tools, technologies, or programming languages that are relevant to the job. Taking additional courses or certifications can also help enhance your technical knowledge. With effort and dedication, you can make your resume more competitive in the job market");
   }
-  $('.bar-container1').show();
+  $(".bar-container1").show();
 
   // soft skill bar
   const score2 = softskill_rating; // replace with your soft score
-  const bar2 = document.querySelector('.bar2');
-  const barHeight2 = Math.min(100, Math.max(0, score2)) + '%';
+  const bar2 = document.querySelector(".bar2");
+  const barHeight2 = Math.min(100, Math.max(0, score2)) + "%";
   bar2.style.height = barHeight2;
 
   if (score2 > 70) {
-  bar2.classList.add('green');
+    bar2.classList.add("green");
+    $("#softDesc").text("Your excellent communication skills are a valuable asset in almost every job. Keep highlighting these skills to stand out in the job market and demonstrate your ability to work effectively with others");
   } else if (score2 >= 40) {
-  bar2.classList.add('yellow');
+    bar2.classList.add("yellow");
+    $("#softDesc").text("Your resume shows potential, but it may not yet stand out from other candidates. Consider highlighting your achievements and emphasizing your strengths to make your resume more appealing to potential employers. Keep in mind that there are many resources available to help you improve your resume. Good luck!");
   } else {
-  bar2.classList.add('red');
+    bar2.classList.add("red");
+    $("#softDesc").text("Consider emphasizing your soft skills, such as teamwork, communication, and problem-solving, which are valued by employers. Providing specific examples of how you have utilized these skills can make your resume stand out.");
   }
-  $('.bar-container2').show();
+  $(".bar-container2").show();
   // Return the rating
   return [rating, softskill_rating];
 }
@@ -119,7 +128,7 @@ const selectElement = document.getElementById("mySelect");
 
 selectElement.addEventListener("change", function () {
   $("#pdf-file-input").slideDown(400);
-//   $("#mySelect").slideUp(0);
+  //   $("#mySelect").slideUp(0);
 
   const selectedOption = selectElement.value;
   console.log(selectedOption);
@@ -130,11 +139,7 @@ selectElement.addEventListener("change", function () {
 var resumeText = "";
 var jobType = "";
 
-
-
-
 ////////////////////////////////////////NOORS CODE BELOW IDK WHAT IT DOES////////////////////////////////////////
-
 
 // if (resumeText != "text" && job)
 // const rating = rateResume(resumeText, jobType);
@@ -177,5 +182,3 @@ var jobType = "";
 //     });
 //   };
 // });
-
-
