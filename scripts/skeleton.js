@@ -38,7 +38,8 @@ if (location.pathname == "/aboutus.html"){
 var resumeRoasterBtn = document.getElementById('roasterBtn');
 var scraperBtn = document.getElementById('scraperBtn');
 var aboutBtn = document.getElementById('aboutBtn');
-
+var resumeRoasterBtn1 = document.getElementById('roasterBtn1');
+var scraperBtn1 = document.getElementById('scraperBtn1');
 
 if (location.pathname == '/index.html') {
     resumeRoasterBtn.addEventListener('click', ()=> {
@@ -51,5 +52,13 @@ if (location.pathname == '/index.html') {
     
     aboutBtn.addEventListener("click", ()=> {
         window.location.href = "aboutus.html";
+    })
+
+    resumeRoasterBtn1.addEventListener("click", ()=> {
+        window.location.href = "resumeroaster.html";
+    })
+
+    scraperBtn1.addEventListener("click", ()=> {
+        window.location.href = "";
     })
 }
