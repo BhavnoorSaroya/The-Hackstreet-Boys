@@ -16,6 +16,12 @@
     padding-bottom: 30%;
 }
 
+.upperCarouselBtn:hover{
+    background-color: grey;
+    color: white;
+    border: 1px solid black;
+}
+
 .carousel-caption > h2 {
     margin-top: 20px;
     text-shadow: 
