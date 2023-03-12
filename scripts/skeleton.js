@@ -47,7 +47,7 @@ if (location.pathname == '/index.html') {
     })
     
     scraperBtn.addEventListener("click", ()=> {
-        window.location.href = "";
+        window.location.href = "127.0.0.1:5003";
     })
     
     aboutBtn.addEventListener("click", ()=> {
@@ -59,6 +59,6 @@ if (location.pathname == '/index.html') {
     })
 
     scraperBtn1.addEventListener("click", ()=> {
-        window.location.href = "";
+        window.location.href = "127.0.0.1:5003";
     })
 }
