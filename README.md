@@ -48,4 +48,19 @@ In the future, we intend to use a machine learning model that uses linear regres
 
 2. 
 
+
+
+
+
+
+
+
+
+3. How does JobTinder help the user gain a sense of JobSecurity?
+--> A well-crafted resume can increase their chances of getting an interview, which can lead to a job offer and better morale.
+    Our application can help job seekers keep track of their job applications, including which jobs they have applied for, when they applied, and any follow-up actions they need to   take. 
+    It keeps aggregating job postings from all over the internet, thus it application can help job seekers find a wider range of job opportunities.
+    This can help them feel more in control of their job search.
+
+    Overall, this is THE application to make the job search process much less stressful and reduce anxiety and increase feelings of job security 
 ```
