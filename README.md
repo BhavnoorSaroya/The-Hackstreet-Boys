@@ -2,7 +2,7 @@
 
 start with 
 
-1) download a requrements
+1) download requrements
 
 pip install -r requirements.txt
 
