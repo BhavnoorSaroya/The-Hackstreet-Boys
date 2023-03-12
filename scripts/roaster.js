@@ -95,3 +95,49 @@ const jobType = "programmer";
 const rating = rateResume(resumeText, jobType);
 //   console.log(`Rating: ${rating}%`);
 //   console.log(rateResume(resumeText, jobType))
+
+
+
+// // Listen for the file to be selected
+// input.addEventListener('change', function() {
+  
+  
+//     console.log(input.files[0]);
+//     var embed = document.getElementById('output');
+//     embed.src = URL.createObjectURL(event.target.files[0]);
+
+
+  
+  
+//   // Get the selected file
+//   const file = input.files[0];
+
+//   // Create a new file reader
+//   const reader = new FileReader();
+
+//   // Set up the file reader to read the contents of the file as an ArrayBuffer
+//   reader.readAsArrayBuffer(file);
+
+//   // Once the file has been loaded, parse it with pdf.js
+//   reader.onload = function() {
+//     // Load the PDF file
+//     pdfjsLib.getDocument(reader.result).promise.then(function(pdf) {
+//       // Get the first page
+//       pdf.getPage(1).then(function(page) {
+//         // Get the text content of the page
+//         page.getTextContent().then(function(textContent) {
+//           // Combine the text items into a single string
+//           const text = textContent.items.map(function(item) {
+//             return item.str;
+//           }).join('');
+
+//           // Display the text on the console
+//           console.log(text);
+//         });
+//       });
+//     });
+//   };
+// });
+
+  
+  
