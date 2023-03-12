@@ -9,39 +9,33 @@ from selenium.webdriver.chrome.options import Options
 
 
 
-# def extract_job(job):
-#     name = job.find("")
-
-# def extract_job_list(URL):
-#     jobs = []
-    
-#     # for job in job_collect:
-#     #     job_info = extract_job(job)
-#     #     jobs.append(job_info)
-#     # return jobs
-#     return job_collect
 
 def extract_job(job):
     name = job.find("span")['title']
-    url = "https://ca.indeed.com/viewjob?jk=" + job['data-jk']
+    url = "https://ca.indeed.com/viewjob?jk=" + job.find("a")['data-jk']
     website = "Indeed"
+    comapany = job.find("span" , {"class" : "companyName"} ).text
     return {
         "name" : name,
-        "company" : "company",
+        "company" : comapany,
         "url" : url,
         "website" : website
     }
 
 def get_jobs(lang_name):
     jobs = []
+
     options = Options()
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     browser = webdriver.Chrome(options=options)
+    browser.execute_script('window.focus();')
     URL = f'https://ca.indeed.com/jobs?q={lang_name}&l=Vancouver'
     browser.get(URL)
     soup = BeautifulSoup(browser.page_source, "html.parser")
-    job_collect = soup.find_all("a",{"class":"jcs-JobTitle"})
+    job_collect = soup.find_all("td",{"class":"resultContent"})
+    
+
     for job in job_collect:
         job_info = extract_job(job)
         jobs.append(job_info)
