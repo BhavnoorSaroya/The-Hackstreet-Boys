@@ -11,7 +11,9 @@ const input = document.getElementById("pdf-file-input");
 // Listen for the file to be selected
 input.addEventListener("change", function () {
   var emb = document.getElementById("output");
-  emb.src = URL.createObjectURL(input.files[0]);
+  emb.src = URL.createObjectURL(input.files[0]) + '#toolbar=0&view=FitH' ;
+
+  $(".inputs").slideUp(2);
   // Get the selected file
   const file = input.files[0];
 
@@ -127,6 +129,7 @@ function rateResume(resumeText, jobType) {
 const selectElement = document.getElementById("mySelect");
 
 selectElement.addEventListener("change", function () {
+  $("#inputs").slideUp(1);
   $("#pdf-file-input").slideDown(400);
   //   $("#mySelect").slideUp(0);
 

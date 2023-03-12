@@ -64,20 +64,19 @@
         background-color: red;
       }
     </style>
+
     <nav id="navbarPlaceholder"></nav>
 
-    <div class="container" id="layout">
+    <div class="container min-vh-100 pt-3" id="layout">
       <div class="row">
         <h2>Resume Roaster</h2>
 
-        <div class="col-5">
-          <div class="input-group">
-            <select id="mySelect"></select>
+        <div class="col-5 inputs">
+          <div class="input-group mt-5">
+            <select id="mySelect" class="form-control"></select>
             <input
               type="file"
               class="form-control"
-              aria-describedby="inputGroupFilAddon03"
-              aria-label="Upload"
               id="pdf-file-input"
               accept="application/pdf"
             />
@@ -88,10 +87,7 @@
             
         </div> -->
 
-        <div class="col-7 embed-responsive embed-responsive-16by9">
-          <div class="bar-container1" style="display: none">
-            <div class="bar1"></div>
-          </div>
+        <div class="col-6 embed-responsive pt-3">
           <!-- <object data="FallSuccessDRflyer.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="100%" style="overflow-x: hidden; overflow-y: hidden;"></object> -->
           <iframe
             src=""
@@ -99,18 +95,33 @@
             frameborder="0"
             id="output"
             scrolling="no"
-            width="auto"
-            height="400"
-            style="overflow-x: hidden; overflow-y: hidden"
+            width="100%"
+            height="500%"
+            style="overflow-x: hidden;"
           ></iframe>
           <!-- <p id="resumeFeedback">
           </p> -->
+          
+        </div>
+
+        <div class="col-2 mt-auto justify-content-center" id="bars">
+          <!-- bar 1 -->
+          <div class="bar-container1" style="display: none">
+            <div class="bar1"></div>
+          </div>
+
+          <!-- bar2 -->
           <div class="bar-container2" style="display: none">
             <div class="bar2"></div>
           </div>
+
+        </div>
+
+        <div class="col-4 mt-auto" id="feedbackdiv">
           <p id="techDesc"></p>
           <p id="softDesc"></p>
         </div>
+
       </div>
     </div>
 
