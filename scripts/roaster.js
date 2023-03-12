@@ -4,7 +4,7 @@
 //     teacher: ['Teaching', 'Education', 'Classroom', 'Lesson', 'Curriculum', 'Student', 'Assessment', 'Grading', 'Pedagogy'],
 //     softskill_keywords : ['Achieved', 'Adapted', 'Analyzed', 'Collaborated', 'Created', 'Demonstrated', 'Developed', 'Executed', 'Improved', 'Initiated', 'Managed', 'Negotiated', 'Organized', 'Presented', 'Resolved', 'Strategized', 'Supervised', 'Trained', 'Utilized', 'Volunteered']
 //   };
-
+$('#pdf-file-input').slideUp(2);
 // Get the input element
 const input = document.getElementById("pdf-file-input");
 
@@ -37,6 +37,7 @@ input.addEventListener("change", function () {
           // Display the text on the console
           console.log(text);
           resumeText = text;
+          console.log(rateResume(text, jobType));
           //
           // return(text);
         });
@@ -72,7 +73,7 @@ function rateResume(resumeText, jobType) {
   const rating = Math.round((numKeywords / jobKeywords[jobType].length) * 100);
 
   softskill_rating = Math.round(
-    (numSoftwords / jobKeywords[jobType].length) * 100 * 3
+    (numSoftwords / jobKeywords["softskill_keywords"].length) * 100 * 3
   );
   if (softskill_rating > 100) {
     softskill_rating = 100;
@@ -85,14 +86,19 @@ function rateResume(resumeText, jobType) {
 const selectElement = document.getElementById("mySelect");
 
 selectElement.addEventListener("change", function () {
+
+    $('#pdf-file-input').slideDown(600);
+
   const selectedOption = selectElement.value;
   console.log(selectedOption);
+  jobType = selectedOption;
 });
 
 // Example usage
 var resumeText = "";
-const jobType = "programmer";
-const rating = rateResume(resumeText, jobType);
+var jobType = "";
+// if (resumeText != "text" && job)
+// const rating = rateResume(resumeText, jobType);
 //   console.log(`Rating: ${rating}%`);
 //   console.log(rateResume(resumeText, jobType))
 
