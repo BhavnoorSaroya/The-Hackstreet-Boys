@@ -9,6 +9,8 @@ const jobKeywords = {
 // Get the keys of the JSON object
 const keys = Object.keys(jobKeywords);
 
+// const selectElement = document.getElementById('my-select');
+
 // Get the select element from the DOM
 const select = document.getElementById("mySelect");
 
