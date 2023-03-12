@@ -1,3 +1,9 @@
+
+.container-roaster{
+  height: 87vh;
+  margin-top: 70px;
+}
+
 .bar-container1,
 .bar-container2 {
   width: 20px;
@@ -33,3 +39,4 @@
 .red {
   background-color: red;
 }
+

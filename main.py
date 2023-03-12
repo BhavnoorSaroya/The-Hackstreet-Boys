@@ -4,7 +4,7 @@ from scrap_wework import get_jobs as get_wework
 from scrap_remoteok import get_jobs as get_remoteok
 from exporter import save_to_file
 
-app = Flask("Reddit-Reader")
+app = Flask(__name__)
 
 db = {}
 
@@ -75,4 +75,5 @@ def save_as():
         return redirect("/")
 
 
-app.run(host="0.0.0.0" , port=8003)
+if __name__ == "__main__":
+    app.run(debug=False, host='0.0.0.0')

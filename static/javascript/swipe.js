@@ -69,6 +69,8 @@
       else if( (mouseOrigin + 20 < currentMousePosition) &&
       !currentTask.classList.contains("completed")){
         //swip right");
+        let showing = document.querySelector(".row-beside")
+        showing.style.display = "block"
         currentTask.classList.remove("deleting");
         currentTask.classList.add("completing");
         currentTask.style.marginLeft = swipeDifference+"px";

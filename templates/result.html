@@ -29,10 +29,15 @@
     </div>
     <section class="job-lists">
       {% for job in jobs %}
-      <div class="job-contain-box swipe-right">
-        <h4 id="job-name">{{job['name']}}</h4>
-        <span id="job-company">{{job['company']}}</span>
-        <a href="{{job['url']}}" target="_blank">Apply from {{job['website']}}</a>
+      <div class="container job-contain-box swipe-right">
+        <div class="row">
+          <h4 id="job-name">{{job['name']}}</h4>
+          <span id="job-company">{{job['company']}}</span>
+          <a href="{{job['url']}}" target="_blank">Apply from {{job['website']}}</a>
+        </div>
+        <div class="row-beside" style="display: none; color: red;">
+          <span>Match with {{job['company']}}</span>
+        </div>
       </div>
       {% endfor %}
     </section>
