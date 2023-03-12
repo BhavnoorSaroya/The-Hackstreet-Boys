@@ -46,6 +46,8 @@ it then gives the user feedback based on the score they receive (depending on th
 
 In the future, we intend to use a machine learning model that uses linear regression to fine tune feedback and the score rating. This would give even better insights to the user, however this could not be implemented at present due to the time constraint.
 
-2. 
+2. Most job websites use cloudflare to prevent scrapers from using their data, how did your career matchmaker feature overcome this hurdle?
+
+--> We used Selenium, using chrome as a driver to overcome the issue of cloudflare being used to prevent scraping. 
 
 ```
