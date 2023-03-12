@@ -12,6 +12,10 @@
     padding-bottom: 0;
 }
 
+.upperCarouselItem{
+    padding-bottom: 30%;
+}
+
 .carousel-caption > h2 {
     margin-top: 20px;
     text-shadow: 
