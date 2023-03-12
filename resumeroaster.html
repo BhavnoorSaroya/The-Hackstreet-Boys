@@ -13,6 +13,7 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/07ca69b752.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
     <link rel="stylesheet" href="./style/stylesheet.css">
     <title>Document</title>
 </head>
@@ -22,21 +23,28 @@
 
     <div class="container" id="layout">
         <div class="row">
-            <div class="col col-2">
-                <label class="form-label" for="customFile">Default file input example</label>
-                <input type="file" class="form-control" id="customFile" />
+
+            <div class="col-6">
+                <iframe style="overflow: hidden;" src="" frameborder="0" id="output" scrolling="no"></iframe>
+
+                <input type="file" id="pdf-file-input" accept="application/pdf">
+                <p id="fileOutput"></p>
+                <select id="mySelect"></select>
             </div>
         </div> 
     </div>
     
-    <!-- a div with file input-->
-    
+
+
 
 
 
     <footer id="footerDiv"> </footer>
-
+    <!-- Include the PDF.js library -->
+    <script src="scripts/build/pdf.js"></script>
+    <script src="scripts/build/pdf.worker.js"></script>
     <script src="scripts/skeleton.js"></script>
+    <script src="scripts/roasterBasic.js"></script>
     <script src="scripts/roaster.js"></script>
 
 
