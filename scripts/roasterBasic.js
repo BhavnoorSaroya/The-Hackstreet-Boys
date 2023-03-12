@@ -3,8 +3,10 @@ const jobKeywords = {
     Select : [],
     Programmer: ['Java', 'Python', 'C', 'HTML', 'CSS', 'JavaScript', 'NodeJS', 'Git', 'Github', 'MySQL', 'Agile', 'OOP', 'TDD', ],
     Teacher: ['Teaching', 'Education', 'Classroom', 'Lesson', 'Curriculum', 'Student', 'Assessment', 'Grading', 'Pedagogy'],
+    Management: ['Project', 'management', 'Leadership', 'Agile', 'Scrum', 'Budgeting', 'Risk', 'management', 'Resource', 'allocation', 'Change', 'management', 'Performance', 'management', 'Stakeholder', 'management', 'Vendor', 'management', 'Negotiation', 'Strategy', 'Analysis', 'Decision-making', 'Communication'],
     softskill_keywords : ['Achieved', 'Adapted', 'Analyzed', 'Collaborated', 'Created', 'Demonstrated', 'Developed', 'Executed', 'Improved', 'Initiated', 'Managed', 'Negotiated', 'Organized', 'Presented', 'Resolved', 'Strategized', 'Supervised', 'Trained', 'Utilized', 'Volunteered']
 };
+
 
 // Get the keys of the JSON object
 const keys = Object.keys(jobKeywords);
