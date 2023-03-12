@@ -37,4 +37,15 @@ Content of the project folder:
 ├── index.html               # landing HTML file, this is the landing page for our app
 └── README.md                # information on the project
 
+
+## QUESTIONS YOU MAY HAVE
+
+1. How does the ResumeRoaster feature work?
+--> The resume roaster feature works by scanning your resume against some of the most popular keywords that are used on that resumes in that specific job industry and 
+it then gives the user feedback based on the score they receive (depending on the number keywords matched). 
+
+In the future, we intend to use a machine learning model that uses linear regression to fine tune feedback and the score rating. This would give even better insights to the user, however this could not be implemented at present due to the time constraint.
+
+2. 
+
 ```
